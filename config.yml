@@ -1,0 +1,25 @@
+ route:
+     receiver: 'slack'
+     receiver: 'requests-mails'
+ receivers:
+     - name: 'slack'
+       slack_configs:
+#           - send_resolved: true
+#             username: 'Kareem Mostafa'
+#             channel: '#prometheus'
+#             api_url: 'https://hooks.slack.com/services/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'
+
+     - name: 'EmailNotification'
+       email_config:
+#           - send_resolved: true
+             to: kareem.mostafa@dai-labor.de
+             from: Sentiment-monitoring@dai-labor.de
+             smtp_smarthost: 'localhost:25'
+             smtp_from: 'alertmanager@prometheus.org'
+             auth_username: default
+             auth_password: default
+             auth_secret: default
+             auth_identity: default
+             require_tls: false
+             html: '{{ template "email.cloud.html" . }}'
+             headers: High CPU Load
