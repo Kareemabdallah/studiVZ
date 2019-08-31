@@ -1,4 +1,4 @@
-# Sentiment Classifier Deployed as a REST API using Flask
+# StudiVZ Case: Sentiment Classifier Deployed as a REST API using Flask
 
 * [Flask Restful Documentation]()
 * [HTTPie Documentation](https://httpie.org/doc)
@@ -6,12 +6,10 @@
 ___
 
 ## Procedure
-1. Start a virtual environment and install requirements
-3. Build sentiment classifier
-4. Write `app.py` which is the API application that will be deployed
-5. Update requirements.txt as you write the code
-6. Test the API
-
+1. run docker-compose file to prepare the app with:
+  * Run in persistance mode
+  * Mount volume
+  * enabling Docker Swarm for application scaling
 
 ## File Structure
 * app_name
@@ -54,26 +52,3 @@ Server: Werkzeug/0.14.1 Python/3.6.3
     "prediction": "Positive"
 }
 ```
-
-4. Deploying the Flask app on an EC2 instance.
-
-
-## Appendix
-
-### Virtual Environment
-1. Create new virtual environment
-```bash
-cd ~/.virtualenvs
-virtualenv name-of-env
-```
-2. Activate virtual environment
-```
-source env/bin/activate
-```
-3. Go to app.py directory where `requirements.txt` is also located
-4. Install required packages from `requirements.txt`
-```bash
-pip install -r requirements.txt
-```
-You will only have to install the `requirements.txt` when working with a new virtual environment.
-# studiVZ
